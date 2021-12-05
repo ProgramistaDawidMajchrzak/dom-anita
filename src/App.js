@@ -1,40 +1,38 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Link as NavLink, Routes, Route } from 'react-router-dom';
+import logo from './images/logo.png';
 
-import logo from './images/logo.png'
-import mainImg from './images/main-img.jpg'
+
+import Offer from './components/Offer';
+import News from './components/News';
+import Home from './components/Home';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <>
-      <div className="container">
-
+      <Router>
         <div className="header">
-          <img src={logo} alt="logo" />
-          <button>KONTAKT</button>
-        </div>
-
-
-        <div className="main">
-          <div className="text">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic sint perferendis ea provident iure soluta animi voluptas perspiciatis. Ea, excepturi doloremque voluptatum harum iusto aspernatur iste amet nemo asperiores nam.</p>
-          </div>
-          <div className="img-box">
-            <img src={mainImg} alt="" />
+          <NavLink to='/'>
+            <img src={logo} alt="logo" />
+          </NavLink>
+          <div className="nav">
+            <NavLink className='normal-button' to='/offer'>Oferta</NavLink>
+            <NavLink className='normal-button' to='/news'>Aktualności</NavLink>
+            <NavLink className='contact-button' to='/contact'>Kontakt</NavLink>
           </div>
         </div>
-        <div className="section-animations">
-          <h2>Zakres usług</h2>
-          <div className="line"></div>
-          <div className="animation-container">
-            <div className="animation-box">
-              
-            </div>
-            <div className="animation-box"></div>
-            <div className="animation-box"></div>
-          </div>
+        <div className="container">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/offer' element={<Offer />} />
+            <Route path='/news' element={<News />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
         </div>
+      </Router>
+      <div className="footer">
 
       </div>
     </>
