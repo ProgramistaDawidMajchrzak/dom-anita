@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="header">
           <NavLink to='/'>
             <img src={logo} alt="logo" />
