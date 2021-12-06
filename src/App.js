@@ -17,11 +17,11 @@ function App() {
           <NavLink to='/'>
             <img src={logo} alt="logo" />
           </NavLink>
-          <nav>
+          <div className='nav'>
             <NavLink className='normal-button' to='/offer'>Oferta</NavLink>
             <NavLink className='normal-button' to='/news'>Aktualności</NavLink>
             <NavLink className='contact-button' to='/contact'>Kontakt</NavLink>
-          </nav>
+          </div>
         </div>
         <div className="container">
           <Routes>
