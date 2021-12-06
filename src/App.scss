@@ -34,7 +34,7 @@ body {
         top: 5px;
     }
 
-    .nav {
+    nav {
         width: 500px;
         display: flex;
         justify-content: flex-end;
@@ -47,6 +47,11 @@ body {
             color: $third-color;
             font-size: 14px;
             margin-left: 50px;
+
+        }
+
+        .active {
+            border-bottom: 1px solid $third-color;
         }
 
         .contact-button {
@@ -61,6 +66,7 @@ body {
             margin-left: 50px;
         }
     }
+
 }
 
 .container {

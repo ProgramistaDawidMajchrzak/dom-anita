@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Link as NavLink, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Routes, Route } from 'react-router-dom';
 import logo from './images/logo.png';
 
 
@@ -17,11 +17,11 @@ function App() {
           <NavLink to='/'>
             <img src={logo} alt="logo" />
           </NavLink>
-          <div className="nav">
+          <nav>
             <NavLink className='normal-button' to='/offer'>Oferta</NavLink>
             <NavLink className='normal-button' to='/news'>Aktualności</NavLink>
             <NavLink className='contact-button' to='/contact'>Kontakt</NavLink>
-          </div>
+          </nav>
         </div>
         <div className="container">
           <Routes>
