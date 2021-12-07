@@ -1,29 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { getNews } from '../redux/actions/index';
 
 export default function News() {
+
+    const news = useSelector(state => state.news);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getNews());
+    }, [dispatch])
+
     return (
         <div className='news'>
-            <div className="news-element">
-                <h3>Title</h3>
-                <p>Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content</p>
-            </div>
-            <div className="news-element">
-                <h3>Title</h3>
-                <p>Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 con</p>
-            </div>
-            <div className="news-element">
-                <h3>Title</h3>
-                <p>Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content</p>
-            </div>
-            <div className="news-element">
-                <h3>Title</h3>
-                <p>Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content </p>
-            </div>
-            <div className="news-element">
-                <h3>Title</h3>
-                <p>Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content Content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content 1 content</p>
-            </div>
+            {news.map(newsElement =>
+                <div className="news-element" key={newsElement._id}>
+                    <h3>{newsElement.title}</h3>
+                    <p>{newsElement.content}</p>
+                </div>
+            )}
         </div>
     )
 }
