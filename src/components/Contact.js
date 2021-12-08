@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import contactImg from '../images/contact-img.jpg';
+import { NavLink } from 'react-router-dom';
 
 export default function Contact() {
 
@@ -31,7 +32,8 @@ export default function Contact() {
 
                     <div className="rodo-box">
                         <input className='checkbox' type="checkbox" />
-                        <p>Akceptuje warunki rodo</p>
+                        <p>Akceptuję</p>
+                        <NavLink to='/rodo'>informacje dotyczące ochrony danych osobowych</NavLink>
                     </div>
 
                     <input className='send-input' type="submit" value="Wyślij" />

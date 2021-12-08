@@ -119,8 +119,8 @@ body {
   height: 500px;
 }
 .container .contact {
-  width: 80%;
-  height: 800px;
+  width: 900px;
+  height: 550px;
   position: relative;
   left: 50%;
   margin-top: 50px;
@@ -161,16 +161,19 @@ body {
   font-family: semplicitapro, sans-serif;
   color: #0C1B32;
   font-size: 16px;
+  font-weight: 500;
 }
 .container .contact .text form :-ms-input-placeholder {
   font-family: semplicitapro, sans-serif;
   color: #0C1B32;
   font-size: 16px;
+  font-weight: 500;
 }
 .container .contact .text form ::placeholder {
   font-family: semplicitapro, sans-serif;
   color: #0C1B32;
   font-size: 16px;
+  font-weight: 500;
 }
 .container .contact .text form textarea {
   height: 100px;
@@ -183,6 +186,11 @@ body {
 .container .contact .text form .rodo-box p {
   margin: 0;
   padding: 0;
+  font-size: 12px;
+}
+.container .contact .text form .rodo-box a {
+  margin-left: 2px;
+  color: #0C1B32;
   font-size: 12px;
 }
 .container .contact .text form .send-input {
@@ -206,6 +214,25 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scaleX(-1);
+}
+.container .rodo {
+  width: 900px;
+  height: auto;
+  position: relative;
+  left: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transform: translate(-50%, 0);
+  margin-top: 50px;
+}
+.container .rodo h3 {
+  color: #0C1B32;
+  text-align: center;
+}
+.container .rodo p {
+  color: #0C1B32;
+  font-size: 12px;
 }
 .container .news {
   width: 80%;

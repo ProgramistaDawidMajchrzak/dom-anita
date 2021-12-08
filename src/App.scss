@@ -138,8 +138,8 @@ body {
     }
 
     .contact {
-        width: 80%;
-        height: 800px;
+        width: 900px;
+        height: 550px;
         position: relative;
         left: 50%;
         margin-top: 50px;
@@ -181,6 +181,7 @@ body {
                     font-family: semplicitapro, sans-serif;
                     color: $secondary-color;
                     font-size: 16px;
+                    font-weight: 500;
                 }
 
                 textarea {
@@ -195,6 +196,12 @@ body {
                     p {
                         margin: 0;
                         padding: 0;
+                        font-size: 12px;
+                    }
+
+                    a {
+                        margin-left: 2px;
+                        color: $secondary-color;
                         font-size: 12px;
                     }
                 }
@@ -221,7 +228,30 @@ body {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
             }
+        }
+    }
+
+    .rodo {
+        width: 900px;
+        height: auto;
+        position: relative;
+        left: 50%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        transform: translate(-50%, 0);
+        margin-top: 50px;
+
+        h3 {
+            color: $secondary-color;
+            text-align: center;
+        }
+
+        p {
+            color: $secondary-color;
+            font-size: 12px;
         }
     }
 

@@ -8,6 +8,7 @@ import Offer from './components/Offer';
 import News from './components/News';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Rodo from './components/Rodo';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path='/offer' element={<Offer />} />
             <Route path='/news' element={<News />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/rodo' element={<Rodo />} />
           </Routes>
         </div>
       </Router>
