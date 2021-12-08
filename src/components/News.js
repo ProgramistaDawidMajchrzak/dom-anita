@@ -1,19 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getNews } from '../redux/actions/index';
+import loadingGif from '../images/loading.gif';
 
 export default function News() {
-
+    const [loading, setLoading] = useState(true);
     const news = useSelector(state => state.news);
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    useEffect((state) => {
         dispatch(getNews());
+        if (state) {
+            setLoading(false);
+        }
     }, [dispatch])
 
     return (
         <div className='news'>
+            {loading ? <img src={loadingGif} alt="loading..." /> : null}
             {news.map(newsElement =>
                 <div className="news-element" key={newsElement._id}>
                     <h3>{newsElement.title}</h3>
