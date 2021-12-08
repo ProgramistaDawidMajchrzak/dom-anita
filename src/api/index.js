@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/news';
+const url = 'http://dom-anita.herokuapp.com/news';
 
 export const getData = () => {
     return axios.get(url);
