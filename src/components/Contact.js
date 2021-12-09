@@ -6,41 +6,40 @@ import { NavLink } from 'react-router-dom';
 export default function Contact() {
 
     const [name, setName] = useState('');
+    const [isNameValid, setIsNameValid] = useState(false);
     const [email, setEmail] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState(false);
     const [message, setMessage] = useState('');
+    const [isMessageValid, setIsMessageValid] = useState(false);
     const [rodo, setRodo] = useState(false);
+    const [isRodoValid, setIsRodoValid] = useState(false);
 
     const handleChange = (e) => {
         switch (e.target.name) {
             case 'name':
-                return setName(e.target.value);
+                return (
+                    setName(e.target.value),
+                    setIsNameValid(false)
+                )
             case 'email':
-                return setEmail(e.target.value);
+                return (
+                    setEmail(e.target.value),
+                    setIsEmailValid(false)
+                )
             case 'message':
-                return setMessage(e.target.value);
+                return (
+                    setMessage(e.target.value),
+                    setIsMessageValid(false)
+                )
+            case 'rodo':
+                return (
+                    setRodo(!rodo),
+                    setIsRodoValid(false)
+                )
             default:
                 return;
         };
     };
-
-    const handleChangeCheckbox = () => {
-        setRodo(!rodo)
-    }
-
-    const Validate = (e) => {
-        e.preventDefault();
-        if (name === '') {
-            // console.log(e.target.name.className)
-        } else if (email === '' || !email.includes('@')) {
-            console.log('email error')
-        } else if (message === '') {
-            console.log('message error')
-        } else if (rodo === false) {
-            console.log('rodo error')
-        } else {
-            console.log('wysłano')
-        }
-    }
 
     const sendEmail = (e) => {
         emailjs.sendForm('service_vcdqxog', 'template_0b60o55', e.target, 'user_rJlig4QrDCQoBTMRscre6')
@@ -53,14 +52,29 @@ export default function Contact() {
         alert('Wiadomość wysłana');
     };
 
+    const Validate = (e) => {
+        e.preventDefault();
+        if (name === '') {
+            setIsNameValid(true)
+        } else if (email === '' || !email.includes('@')) {
+            setIsEmailValid(true)
+        } else if (message === '') {
+            setIsMessageValid(true)
+        } else if (rodo === false) {
+            setIsRodoValid(true)
+        } else {
+            sendEmail(e)
+        }
+    }
+
     return (
         <div className='contact'>
             <div className="text">
                 <form onSubmit={Validate}>
                     <input
                         onChange={handleChange}
-                        value={name[0]}
-                        className='text-input'
+                        value={name}
+                        className={`text-input ${isNameValid && 'input-valid'}`}
                         type="text"
                         name="name"
                         placeholder='Imię i nazwisko'
@@ -69,7 +83,7 @@ export default function Contact() {
                     <input
                         onChange={handleChange}
                         value={email}
-                        className='text-input'
+                        className={`text-input ${isEmailValid && 'input-valid'}`}
                         type="email"
                         name="email"
                         placeholder='Email'
@@ -85,7 +99,7 @@ export default function Contact() {
                     <textarea
                         onChange={handleChange}
                         value={message}
-                        className='text-input'
+                        className={`text-input ${isMessageValid && 'input-valid'}`}
                         name="message"
                         placeholder='Wiadomość'
                     />
@@ -93,8 +107,9 @@ export default function Contact() {
                     <div className="rodo-box">
                         <input
                             value={rodo}
-                            onChange={handleChangeCheckbox}
-                            className='checkbox'
+                            name='rodo'
+                            onChange={handleChange}
+                            className={isRodoValid && 'checkbox-valid'}
                             type="checkbox" />
                         <p>Akceptuję</p>
                         <NavLink to='/rodo'>informacje dotyczące ochrony danych osobowych</NavLink>
