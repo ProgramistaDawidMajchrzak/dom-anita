@@ -36,12 +36,12 @@ body {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #5283BF;
+  color: #2F609A;
   font-size: 14px;
   margin-left: 50px;
 }
 .header .nav .active {
-  border-bottom: 1px solid #5283BF;
+  border-bottom: 1px solid #2F609A;
 }
 .header .nav .contact-button {
   text-decoration: none;
@@ -89,7 +89,7 @@ body {
   font-weight: 800;
 }
 .container .main .text h2 span {
-  color: #5283BF;
+  color: #2F609A;
 }
 .container .main .text p {
   letter-spacing: 1.5px;
@@ -151,6 +151,20 @@ body {
   border-right: none;
   border-left: 1px solid #0C1B32;
   border-bottom: 1px solid #0C1B32;
+  color: #0C1B32;
+  border-radius: 2px;
+  padding: 4px;
+  outline: none;
+  font-size: 16px;
+}
+.container .contact .text form .valid-input {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: 1px solid red;
+  border-bottom: 1px solid red;
   color: #0C1B32;
   border-radius: 2px;
   padding: 4px;
@@ -255,7 +269,7 @@ body {
 }
 .container .news .news-element {
   width: 100%;
-  border-bottom: 2px solid #5283BF;
+  border-bottom: 2px solid #2F609A;
 }
 .container .news .news-element h3 {
   color: #0C1B32;
@@ -287,7 +301,7 @@ body {
     width: 150px;
   }
   .header .nav .normal-button {
-    color: #5283BF;
+    color: #2F609A;
     font-size: 12px;
     margin-left: 40px;
   }
@@ -394,7 +408,7 @@ body {
     font-weight: 800;
   }
   .container .main .text h2 span {
-    color: #5283BF;
+    color: #2F609A;
   }
   .container .main .text p {
     letter-spacing: 1.5px;

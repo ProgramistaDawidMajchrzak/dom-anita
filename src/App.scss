@@ -2,7 +2,7 @@
 
 $primary-color: #eeeeee;
 $secondary-color: #0C1B32;
-$third-color: #5283BF;
+$third-color: #2F609A; //47 96 154
 $white: #f1f1f1;
 
 
@@ -174,7 +174,21 @@ body {
                     padding: 4px;
                     outline: none;
                     font-size: 16px;
+                }
 
+                .valid-input {
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    background-color: transparent;
+                    border-top: none;
+                    border-right: none;
+                    border-left: 1px solid red;
+                    border-bottom: 1px solid red;
+                    color: $secondary-color;
+                    border-radius: 2px;
+                    padding: 4px;
+                    outline: none;
+                    font-size: 16px;
                 }
 
                 ::placeholder {

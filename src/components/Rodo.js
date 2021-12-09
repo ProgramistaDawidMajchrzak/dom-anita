@@ -8,7 +8,7 @@ export default function Rodo() {
             <p>Wypełniając obowiązek informacyjny wynikający z art. 13 ogólnego Rozporządzenia o ochronie danych osobowych z dnia 27 kwietnia 2016r. (Dz. Urz. UE L 119 z 04.05.2016), aby zapewnić Państwu kontrolę nad sposobem wykorzystywania Państwa danych osobowych informuję, iż:
                 <br />
                 <br />
-                1. administratorem Pani/Pana danych osobowych jest As Dom Nieruchomosci Sp. z o.o.
+                1. administratorem Pani/Pana danych osobowych jest Dom administracja Sp. z o.o.
                 z siedzibą w Poznaniu, ul. Hutnicza 52/43, 61-486 Poznań, NIP 783-18-18-623
                 <br />
                 <br />
