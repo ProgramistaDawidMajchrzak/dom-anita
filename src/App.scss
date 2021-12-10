@@ -216,7 +216,7 @@ body {
                     align-items: center;
 
                     .checkbox-valid {
-                        outline: 1px solid red;
+                        outline: 1.5px solid red;
                     }
 
                     p {
@@ -447,7 +447,6 @@ body {
                 position: relative;
                 height: 310px;
                 width: 260px;
-                backdrop-filter: blur(14px);
                 left: 50%;
                 transform: translate(-50%, 0);
                 top: 320px;
@@ -504,35 +503,23 @@ body {
         .contact {
             width: 100%;
             height: 700px;
+            position: relative;
 
             .text {
-                position: absolute;
-                height: 350px;
-                width: 480px;
-                backdrop-filter: blur(14px);
-                right: 0;
-                top: 110px;
+                position: relative;
+                height: 310px;
+                width: 260px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 300px;
                 z-index: 1;
 
                 form {
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
 
                     .text-input {
-                        margin-top: 20px;
-                        margin-left: 20px;
-                        background-color: transparent;
-                        border-top: none;
-                        border-right: none;
-                        border-left: 1px solid $secondary-color;
-                        border-bottom: 1px solid $secondary-color;
-                        color: $secondary-color;
-                        border-radius: 2px;
-                        padding: 4px;
                         outline: none;
-                        font-size: 16px;
+                        font-size: 12px;
+                        margin-right: 15px;
                     }
 
                     .input-valid {
@@ -541,65 +528,35 @@ body {
                     }
 
                     ::placeholder {
-                        font-family: 'Ubuntu', sans-serif;
-                        color: $secondary-color;
-                        font-size: 16px;
-                        font-weight: 400;
-                    }
-
-                    textarea {
-                        height: 100px;
-                        font-family: 'Ubuntu', sans-serif;
-                        font-weight: 400;
+                        font-size: 12px;
                     }
 
                     .rodo-box {
-                        margin: 20px;
-                        display: flex;
-                        align-items: center;
-
-                        .checkbox-valid {
-                            outline: 1px solid red;
-                        }
 
                         p {
-                            margin: 0;
-                            padding: 0;
-                            font-size: 12px;
+                            margin-left: 10px;
                         }
 
                         a {
-                            margin-left: 2px;
+                            margin-left: 10px;
                             color: $secondary-color;
                             font-size: 12px;
                         }
                     }
 
                     .send-input {
-                        width: 60px;
-                        position: absolute;
-                        right: 20px;
-                        bottom: 20px;
+                        bottom: -40px;
                     }
                 }
             }
 
             .img-box {
-                width: 500px;
-                height: 500px;
+                width: 300px;
+                height: 300px;
                 position: absolute;
-                left: 0;
-
-                img {
-                    border-radius: 100% 100% 5% 5%;
-                    position: relative;
-                    object-fit: contain;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    -webkit-transform: scaleX(-1);
-                    transform: scaleX(-1);
-                }
+                left: 50%;
+                transform: translate(-50%, 0);
+                top: 30px;
             }
         }
     }
