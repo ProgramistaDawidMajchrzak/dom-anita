@@ -7,8 +7,8 @@ export default function Home() {
         <>
             <div className="main">
                 <div className="text">
-                    <h2><span>L</span>orem ipsum</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.Hic sint perferendis ea provident iure soluta animi voluptas perspiciatis.Ea, excepturi doloremque voluptatum harum iusto aspernatur iste amet nemo asperiores nam.</p>
+                    <h2><span>D</span>om Sp. z o.o.</h2>
+                    <p>Specjalizujemy się w profesjonalnej obsłudze rynku nieruchomości. Głównym oraz podstawowym sektorem działalności naszej spółki jest Zarządzanie  Nieruchomościami. Powierzając nam swoją nieruchomość macie Państwo gwarancję profesjonalizmu i uczciwości w Państwa nieruchomości, co zwiększy dochody i wygeneruje najwięcej korzyści.</p>
                 </div>
                 <div className="img-box">
                     <img src={mainImg} alt="" />
