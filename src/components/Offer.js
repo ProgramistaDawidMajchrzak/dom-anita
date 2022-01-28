@@ -3,7 +3,10 @@ import '../App.css';
 
 import mark from '../images/mark.png';
 
-import gifA from '../images/A.png';
+import gifA from '../images/A-icon.png';
+import gifB from '../images/K-icon.png';
+import gifC from '../images/Ot-icon.png';
+import gifD from '../images/Op.png';
 
 
 
@@ -119,7 +122,7 @@ export default function Offer() {
 
             <div className="offer-section">
                 <div className="flex">
-                    <img className='a-gif-1' src={gifA} alt="" />
+                    <img className='a-gif-1' src={gifB} alt="" />
                     <h2><span>K</span>sięgowość</h2>
                 </div>
 
@@ -174,7 +177,7 @@ export default function Offer() {
 
             <div className="offer-section">
                 <div className="flex">
-                    <img className='a-gif-1' src={gifA} alt="" />
+                    <img className='a-gif-1' src={gifC} alt="" />
                     <h2><span>O</span>bsługa techniczna</h2>
                 </div>
 
@@ -273,7 +276,7 @@ export default function Offer() {
 
             <div className="offer-section">
                 <div className="flex">
-                    <img className='a-gif-1' src={gifA} alt="" />
+                    <img className='a-gif-1' src={gifD} alt="" />
                     <h2><span>O</span>bsługa prawna</h2>
                 </div>
 

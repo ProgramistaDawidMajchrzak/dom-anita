@@ -5,16 +5,6 @@ $secondary-color: #0C1B32;
 $third-color: #123d70;
 $white: #f1f1f1;
 
-@keyframes spin {
-    from {
-        transform: rotate(0)
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -38,10 +28,10 @@ body {
     position: relative;
 
     img {
-        width: 200px;
+        width: 260px;
         height: auto;
         position: relative;
-        top: 5px;
+        top: 10px;
     }
 
     .nav {
@@ -169,18 +159,17 @@ body {
         .offer-info {
             width: 700px;
             height: auto;
-            box-shadow: 0px 10px 25px 4px rgb(189, 189, 189);
             position: relative;
             left: 50%;
             top: 50px;
             transform: translate(-50%, 0);
 
             p {
-                color: $third-color;
+                color: $secondary-color;
                 padding: 30px;
                 text-align: center;
                 letter-spacing: 1.4px;
-                font-weight: 500;
+                font-weight: 700;
                 font-size: 16px;
                 line-height: 20px;
             }
@@ -207,6 +196,7 @@ body {
 
                 .a-gif-1 {
                     width: 200px;
+                    margin-left: 40px;
                 }
 
                 h2 {
@@ -248,18 +238,6 @@ body {
             }
 
         }
-
-
-        // .b-background {
-        //     width: 80px;
-        //     position: relative;
-        //     left: -100px;
-        //     top: -100px;
-        //     animation-name: spin;
-        //     animation-duration: 6s;
-        //     animation-timing-function: linear;
-        //     animation-iteration-count: infinite;
-        // }
     }
 
     .contact {
@@ -434,8 +412,52 @@ body {
 
 .footer {
     width: 100%;
-    height: 200px;
+    height: 180px;
     background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+
+    .left-info {
+        width: 200px;
+        margin-right: 50px;
+
+        h4 {
+            color: $primary-color;
+            font-size: 24px;
+        }
+
+        p {
+            font-weight: 500;
+            margin: 0;
+            padding-bottom: 5px;
+            color: $primary-color;
+        }
+    }
+
+    .right-info {
+        width: 200px;
+        margin-left: 50px;
+
+        .flex {
+            display: flex;
+            align-items: center;
+            margin-bottom: -10px;
+
+            img {
+                width: 16px;
+            }
+
+            p {
+                color: $primary-color;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+        }
+
+        .first-phone {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -444,8 +466,8 @@ body {
 
         img {
             position: relative;
-            top: 5px;
-            width: 150px;
+            top: 10px;
+            width: 200px;
         }
 
         .nav {
@@ -503,6 +525,55 @@ body {
                 top: 30px;
             }
         }
+
+        .offer {
+            width: 100%;
+
+
+            h3 {
+                font-size: 20px;
+                margin-left: 0px;
+            }
+
+            .offer-section {
+
+                .flex {
+
+                    .a-gif-1 {
+                        width: 160px;
+                        margin-left: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .footer {
+        height: 140px;
+
+        .left-info {
+            margin-top: 10px;
+
+            h4 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .right-info {
+
+            .flex {
+                margin-bottom: -25px;
+
+                img {
+                    width: 14px;
+                }
+            }
+        }
     }
 }
 
@@ -519,6 +590,8 @@ body {
 
         img {
             width: 240px;
+            left: 15px;
+            top: -5px;
             height: auto;
             position: relative;
         }
@@ -602,7 +675,72 @@ body {
         }
 
         .offer {
-            margin-top: 60px;
+            width: 100%;
+
+            .offer-info {
+                width: 90%;
+
+
+                p {
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: $secondary-color;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                padding: 0 10px;
+                text-align: center;
+                padding-bottom: 4px;
+            }
+
+            .offer-section {
+
+                .flex {
+                    flex-direction: column;
+
+                    .a-gif-1 {
+                        width: 200px;
+                        margin-left: 0px;
+                    }
+
+                    h2 {
+                        margin-left: 0px;
+
+                    }
+                }
+
+                ul {
+                    margin-top: 10px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            color: $third-color;
+                            font-weight: 600;
+                        }
+
+                        img {
+                            width: 22px;
+                            height: auto;
+                            padding: 10px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: $secondary-color;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+
+            }
         }
 
         .news {
@@ -671,8 +809,43 @@ body {
     }
 
     .footer {
-        width: 100%;
-        height: 200px;
-        background-color: $secondary-color;
+        height: 240px;
+        flex-direction: column;
+
+        .left-info {
+            width: 100%;
+            margin-right: 0px;
+            text-align: center;
+
+            h4 {
+                font-size: 16px;
+                margin-top: 0px;
+            }
+        }
+
+        .right-info {
+            width: 100%;
+            margin-left: 0px;
+
+            .flex {
+                width: 150px;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-bottom: -20px;
+
+                img {
+                    width: 12px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .first-phone {
+                margin-top: 10px;
+            }
+        }
     }
 }

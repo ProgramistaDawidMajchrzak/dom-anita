@@ -9,12 +9,13 @@ export default function News() {
     const news = useSelector(state => state.news);
     const dispatch = useDispatch();
 
-    useEffect((state) => {
+    useEffect(() => {
         dispatch(getNews());
-        if (state) {
-            setLoading(false);
-        }
-    }, [dispatch])
+    }, [dispatch]);
+
+    setInterval(() => {
+        setLoading(false)
+    }, 4000)
 
     return (
         <div className='news'>

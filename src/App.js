@@ -10,6 +10,9 @@ import Contact from './components/Contact';
 import Rodo from './components/Rodo';
 import Abc from './components/Abc';
 
+import Phone from './images/phone.png';
+import Mail from './images/email.png';
+
 function App() {
   return (
     <>
@@ -37,7 +40,25 @@ function App() {
         </div>
       </HashRouter>
       <div className="footer">
-
+        <div className="left-info">
+          <h4>Dom Sp z o.o</h4>
+          <p>Ul. Hutnicza 52 lok 43</p>
+          <p>61-486 Poznań</p>
+        </div>
+        <div className="right-info">
+          <div className="flex first-phone">
+            <img src={Phone} alt="telefon" />
+            <p>507 491 800</p>
+          </div>
+          <div className="flex">
+            <img src={Phone} alt="telefon" />
+            <p>794 456 431</p>
+          </div>
+          <div className="flex">
+            <img src={Mail} alt="e-mail" />
+            <p>sekretariat.dom@op.pl</p>
+          </div>
+        </div>
       </div>
     </>
   );
