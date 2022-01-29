@@ -114,7 +114,7 @@ export default function Offer() {
                     </li>
                     <li>
                         <img src={mark} alt="" />
-                        <p>reprezentowanie właściciela na zebraniach <span>Wspólnot mieszkaniowych</span></p>
+                        <p>Reprezentowanie właściciela na zebraniach <span>Wspólnot mieszkaniowych</span></p>
                     </li>
                 </ul>
 
